@@ -1,0 +1,36 @@
+:root {
+  /* Brand palette, pulled from daddydrones.in's live stylesheet */
+  --color-primary: #2298c6;
+  --color-primary-dark: #1a7aa3;
+  --color-primary-light: #eaf6fc;
+  --color-accent-red: #e02020;
+  --color-accent-green: #4a9d1e;
+  --color-accent-amber: #e08a00;
+
+  --color-bg: #ffffff;
+  --color-bg-soft: #f6f8fc;
+  --color-bg-dark: #161c2c;
+  --color-text: #2b2e33;
+  --color-text-muted: #6b7280;
+  --color-text-faint: #98a0ab;
+  --color-border: #e7e9ee;
+  --color-border-soft: #f0f1f4;
+
+  --color-category-grad-start: #ffffff;
+  --color-category-grad-end: #dee6f9;
+
+  --font-heading: 'Montserrat', 'Segoe UI', sans-serif;
+  --font-body: 'Roboto', 'Segoe UI', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+
+  --shadow-card: 0 1px 3px rgba(20, 30, 60, 0.06), 0 1px 2px rgba(20, 30, 60, 0.04);
+  --shadow-card-hover: 0 16px 32px rgba(20, 30, 60, 0.12);
+  --shadow-header: 0 1px 0 rgba(20, 30, 60, 0.06);
+
+  --container-width: 1264px;
+  --header-h-top: 38px;
+  --header-h-main: 76px;
+}

@@ -1,0 +1,263 @@
+.hero {
+  background: linear-gradient(135deg, #123151 0%, #1a4d78 45%, var(--color-primary) 100%);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 32px;
+  padding: 70px 20px 76px;
+  min-height: 420px;
+}
+.hero__kicker {
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-size: 44px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.hero h1 span {
+  color: #a9dcf5;
+}
+.hero__copy p {
+  color: #d7e6f5;
+  font-size: 15.5px;
+  max-width: 480px;
+  margin-bottom: 30px;
+}
+.hero__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.hero__cta .btn-outline {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+.hero__cta .btn-outline:hover { background: rgba(255, 255, 255, 0.12); border-color: #fff; color: #fff; }
+
+.hero__art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 320px;
+}
+.hero__art-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 65%);
+  border-radius: 50%;
+}
+.hero__glyph {
+  width: 260px;
+  height: 260px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25));
+  animation: float 5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@media (max-width: 860px) {
+  .hero__inner { grid-template-columns: 1fr; text-align: center; padding: 50px 20px; }
+  .hero__copy p { margin-left: auto; margin-right: auto; }
+  .hero__cta { justify-content: center; }
+  .hero__art { height: 220px; margin-top: 10px; }
+  .hero__glyph { width: 180px; height: 180px; }
+  .hero h1 { font-size: 32px; }
+}
+
+/* Trust strip */
+.trust-strip {
+  background: #fff;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+.trust-strip__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.trust-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.trust-strip__item svg { color: var(--color-primary); }
+
+/* Category grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+.category-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 26px 12px 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(to top, var(--color-category-grad-start), var(--color-category-grad-end));
+  border: 1px solid var(--color-border-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.category-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.category-tile__art {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 10px;
+}
+.category-tile__name {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--color-text);
+}
+.category-tile__count {
+  font-size: 11.5px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 520px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+
+/* Promo strip */
+.promo-strip__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.promo-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  min-height: 190px;
+  color: #fff;
+}
+.promo-card--blue { background: linear-gradient(120deg, #1a4d78, var(--color-primary)); }
+.promo-card--dark { background: linear-gradient(120deg, #1b1f2e, #3a2418); }
+.promo-card h3 { color: #fff; font-size: 24px; margin: 6px 0 8px; }
+.promo-card p { color: rgba(255, 255, 255, 0.85); font-size: 13.5px; margin-bottom: 14px; }
+.promo-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 13.5px;
+}
+.promo-card__glyph {
+  width: 130px;
+  height: 130px;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+@media (max-width: 780px) {
+  .promo-strip__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .promo-card { flex-direction: column; text-align: center; gap: 16px; padding: 28px 20px; }
+  .promo-card__glyph { width: 90px; height: 90px; }
+}
+
+/* Brand strip */
+.brand-strip__row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px 40px;
+  margin-top: 18px;
+}
+.brand-strip__row span {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 19px;
+  color: var(--color-text-faint);
+  letter-spacing: 0.3px;
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.testimonial-card {
+  background: #fff;
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.testimonial-card p {
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+.testimonial-card__foot {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: auto;
+  padding-top: 6px;
+  border-top: 1px solid var(--color-border-soft);
+}
+.testimonial-card__foot strong { font-size: 13.5px; }
+.testimonial-card__foot a { font-size: 12px; color: var(--color-primary); }
+
+@media (max-width: 900px) {
+  .testimonial-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+}
+
+/* WhatsApp CTA */
+.whatsapp-cta {
+  background: linear-gradient(120deg, #1c8a3f, #4a9d1e);
+}
+.whatsapp-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.whatsapp-cta h2 { color: #fff; font-size: 24px; margin-bottom: 6px; }
+.whatsapp-cta p { color: rgba(255, 255, 255, 0.85); font-size: 14px; }
+.whatsapp-cta .btn-primary { background: #fff; color: #1c8a3f; }
+.whatsapp-cta .btn-primary:hover { background: #eafff0; }
