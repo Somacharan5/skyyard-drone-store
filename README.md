@@ -9,6 +9,16 @@ carousels, testimonials, and a full checkout flow.
 details in `client/src/config/brand.js` for the real thing whenever it's
 decided. Nothing else in the app needs to change.
 
+## Live
+
+- **Storefront:** https://skyyard-store.netlify.app (Netlify)
+- **API:** https://skyyard-api.fly.dev (Fly.io, `sin`/Singapore region, 1GB
+  persistent volume for the SQLite file)
+- **Repo:** https://github.com/Somacharan5/skyyard-drone-store (private)
+
+Frontend redeploys: `cd client && VITE_API_URL=https://skyyard-api.fly.dev/api npm run build && netlify deploy --prod --dir=dist`.
+Backend redeploys: `cd server && flyctl deploy`.
+
 ## Stack
 
 - **client/** — React 19 + Vite, React Router, plain CSS (no framework)
