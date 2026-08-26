@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { BRAND } from '../config/brand';
 import { useCategories } from '../api/hooks';
 import CategoryGlyph from '../icons/CategoryGlyph';
-import { MapPin, Phone, Mail, Instagram, Youtube, Facebook, Twitter, Truck, Shield, Lock } from '../icons/Icon';
+import { MapPin, Phone, Mail, WhatsApp, Instagram, Youtube, Facebook, Twitter, Truck, Shield, Lock } from '../icons/Icon';
 import './Footer.css';
 
 export default function Footer() {
@@ -112,6 +112,12 @@ export default function Footer() {
             </li>
             <li>
               <Phone size={16} /> <a href={BRAND.phoneHref}>{BRAND.phone}</a>
+            </li>
+            <li>
+              <WhatsApp size={16} />{' '}
+              <a href={BRAND.whatsapp} target="_blank" rel="noreferrer">
+                Chat on WhatsApp
+              </a>
             </li>
             <li>
               <Mail size={16} /> <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a>

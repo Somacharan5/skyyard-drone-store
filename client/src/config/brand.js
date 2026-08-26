@@ -3,10 +3,10 @@
 export const BRAND = {
   name: 'SkyYard',
   tagline: "India's RC & Drone Hobby Store",
-  phone: '+91 98765 43210',
-  phoneHref: 'tel:+919876543210',
+  phone: '+91 91829 35177',
+  phoneHref: 'tel:+919182935177',
   email: 'hello@skyyard.example',
-  whatsapp: 'https://wa.me/919876543210',
+  whatsapp: 'https://wa.me/919182935177',
   address: 'Shop 12, Hobby Arcade, Andheri West, Mumbai, Maharashtra 400058',
   social: {
     instagram: '#',

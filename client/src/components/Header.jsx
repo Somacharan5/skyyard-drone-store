@@ -44,7 +44,7 @@ export default function Header() {
     <header className="site-header">
       <div className="header-topbar">
         <div className="container header-topbar__inner">
-          <a href={BRAND.phoneHref} className="header-topbar__item">
+          <a href={BRAND.whatsapp} target="_blank" rel="noreferrer" className="header-topbar__item">
             <Phone size={13} /> {BRAND.phone}
           </a>
           <div className="header-topbar__right">

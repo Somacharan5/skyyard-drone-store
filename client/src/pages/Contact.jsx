@@ -38,7 +38,12 @@ export default function Contact() {
         <div>
           <Phone size={22} />
           <strong>Call or WhatsApp</strong>
-          <p>{BRAND.phone}</p>
+          <p>
+            <a href={BRAND.phoneHref}>{BRAND.phone}</a> &middot;{' '}
+            <a href={BRAND.whatsapp} target="_blank" rel="noreferrer">
+              WhatsApp
+            </a>
+          </p>
         </div>
       </div>
 
