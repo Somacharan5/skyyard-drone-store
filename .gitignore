@@ -3,6 +3,7 @@ dist/
 build/
 *.log
 .DS_Store
+.claude/
 
 # server
 server/.env
@@ -13,3 +14,6 @@ server/data/*.sqlite-shm
 # client
 client/.env
 client/.env.local
+
+# Local Netlify folder
+.netlify
